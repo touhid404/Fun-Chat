@@ -5,7 +5,7 @@ import authRoutes from "./routes/auth.route.js";
 import { createServer } from "http";
 import { initializeSocket } from "./lib/socket.js";
 const PORT = process.env.PORT || 5001;
-
+const __dirname = path.resolve();
 dotenv.config();
 const app = express();
 

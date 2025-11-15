@@ -1,13 +1,22 @@
 {
-	"name": "my-fullstack-app",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+  "name": "socket-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
 		"start": "npm start --prefix backend"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/touhid404/Fun-Chat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/touhid404/Fun-Chat/issues"
+  },
+  "homepage": "https://github.com/touhid404/Fun-Chat#readme"
 }
