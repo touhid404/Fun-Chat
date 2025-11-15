@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import path from "path";
 import authRoutes from "./routes/auth.route.js";
 import { createServer } from "http";
 import { initializeSocket } from "./lib/socket.js";
