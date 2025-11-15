@@ -1,16 +1,13 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import path from "path";
-import { fileURLToPath } from "url";
+
 import { createServer } from "http";
 import authRoutes from "./routes/auth.route.js";
 import { initializeSocket } from "./lib/socket.js";
 
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 8001;
@@ -34,12 +31,12 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 
 // Serve frontend in production
-if (process.env.NODE_ENV === "production") {
-	app.use(express.static(path.join(__dirname, "../frontend/dist")));
-	app.get("*", (req, res) => {
-		res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
-	});
-}
+// if (process.env.NODE_ENV === "production") {
+// 	app.use(express.static(path.join(__dirname, "../frontend/dist")));
+// 	app.get("*", (req, res) => {
+// 		res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+// 	});
+// }
 
 // Start HTTP server
 httpServer.listen(PORT, () => {
